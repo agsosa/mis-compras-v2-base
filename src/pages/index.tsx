@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
-import styled from "styled-components";
-import TestFooter from "@components/TestFooter";
+import type { NextPage } from 'next';
+import styled from 'styled-components';
+import TestFooter from '@components/TestFooter';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
         <Title>Título de prueba</Title>
       </main>
-      <TestFooter testProp="Testing Next.js" />{" "}
+      <TestFooter testProp="Testing Next.js" />{' '}
     </div>
   );
 };

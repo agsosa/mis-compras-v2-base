@@ -1,6 +1,7 @@
 {
   "name": "mis-compras-v2-base",
   "version": "0.1.0",
+  "description": "Proyecto Mis compras v2",
   "private": true,
   "scripts": {
     "dev": "next dev",

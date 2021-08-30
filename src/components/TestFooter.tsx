@@ -1,6 +1,6 @@
-import { FC, useEffect } from "react";
-import { Container } from "./TestFooter.styled";
-import useCounter from "@hooks/useCounter";
+import { FC, useEffect } from 'react';
+import { Container } from './TestFooter.styled';
+import useCounter from '@hooks/useCounter';
 
 interface TestFooterProps {
   testProp: string;

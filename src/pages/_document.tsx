@@ -1,20 +1,19 @@
-import Document, { DocumentContext } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, { DocumentContext } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 // Styled-components setup. Source: https://github.com/vercel/next.js/blob/master/examples/with-styled-components/pages/_document.js
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const sheet = new ServerStyleSheet()
-    const originalRenderPage = ctx.renderPage
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
-        })
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+        });
 
-      const initialProps = await Document.getInitialProps(ctx)
+      const initialProps = await Document.getInitialProps(ctx);
 
       return {
         ...initialProps,
@@ -24,9 +23,9 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         ),
-      }
+      };
     } finally {
-      sheet.seal()
+      sheet.seal();
     }
   }
 }

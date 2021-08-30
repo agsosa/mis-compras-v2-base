@@ -11,11 +11,11 @@
       const screen = render(<Footer />) // Footer estará envuelto por lo que haya en el Wrapper de este archivo
 */
 
-import React, { FC, ReactElement } from "react";
-import { render, RenderOptions } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
-import theme from "@styles/theme";
-import GlobalStyle from "@styles/globalStyles";
+import React, { FC, ReactElement } from 'react';
+import { render, RenderOptions } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
+import theme from '@styles/theme';
+import GlobalStyle from '@styles/globalStyles';
 
 const Wrapper: FC = ({ children }) => {
   return (
@@ -26,7 +26,7 @@ const Wrapper: FC = ({ children }) => {
   );
 };
 
-const customRender = (ui: ReactElement, options?: Omit<RenderOptions, "wrapper">) => render(ui, { wrapper: Wrapper, ...options });
+const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) => render(ui, { wrapper: Wrapper, ...options });
 export { customRender as render };
 
-export * from "@testing-library/react";
+export * from '@testing-library/react';
